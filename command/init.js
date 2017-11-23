@@ -33,7 +33,7 @@ module.exports = () => {
 
         log(chalk.blue('Download will take some time'))    
 
-        clone(`https://github.com/Slice-dd/${tplName}.git`, pwd + `/${projectName}`, null, (err) => {
+        clone(`${config.path}/${tplName}.git`, pwd + `/${projectName}`, null, (err) => {
             if(err) {
                 chalk.red(' failed to download the template')
             }else {
